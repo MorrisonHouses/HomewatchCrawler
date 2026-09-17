@@ -1,0 +1,9 @@
+[phases.setup]
+nixPkgs = ["php82", "nodejs_20"]
+
+[phases.install]
+cmds = [
+  "composer install --no-dev",
+  "npm install",
+  "npx playwright install chromium"
+]
